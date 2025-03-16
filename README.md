@@ -47,13 +47,7 @@ The **Inventory Management System** is a web-based application designed to help 
 
 ## Admin Credentials
 - **Username:** `admin`
-- **Password:** `admin`
-
-## Screenshots
-- Admin Login Page
-- Stock Management
-- Product Management
-- Sales and Purchase Reports
+- **Password:** `admin'
 
 ## Troubleshooting
 1. **Database connection error?**
