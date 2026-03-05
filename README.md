@@ -94,8 +94,12 @@ Open **http://localhost:8080**
 2. Go to [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo**
 3. Add MySQL: click **+ New** → **Database** → **MySQL**
 4. Railway auto-injects `MYSQLHOST`, `MYSQLUSER`, `MYSQLPASSWORD`, `MYSQLDATABASE` — the app reads these automatically
-5. In Railway → your MySQL service → **Query** tab → paste and run contents of `database.sql`
-6. App deploys and goes live on a Railway URL
+5. Import the schema — in Railway → MySQL service → **Connect** button → **Public Network** tab → copy the credentials, then run:
+   ```bash
+   mysql -h HOST -u root -pPASSWORD --port PORT railway < database.sql
+   ```
+6. Your PHP app service → **Settings** → **Generate Domain** to get a public URL
+7. App is live — login with `admin` / `admin123`
 
 ---
 

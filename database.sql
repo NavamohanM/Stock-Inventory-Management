@@ -8,10 +8,10 @@ SET time_zone = "+00:00";
 SET NAMES utf8mb4;
 
 -- ──────────────────────────────────────────────
--- Create database (skip if already exists)
+-- NOTE: On Railway, the database is pre-created (named 'railway').
+-- Run: mysql -h HOST -u USER -pPASS --port PORT railway < database.sql
+-- For local: CREATE DATABASE ims480; then run against that.
 -- ──────────────────────────────────────────────
-CREATE DATABASE IF NOT EXISTS `ims480` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `ims480`;
 
 -- ──────────────────────────────────────────────
 -- users
