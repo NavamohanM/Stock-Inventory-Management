@@ -1,0 +1,111 @@
+/* ── Layout ── */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.container-fluid {
+  flex: 1;
+}
+
+/* ── Stat Cards ── */
+a .stat-card,
+a .alert {
+  cursor: pointer;
+}
+a .alert:hover {
+  filter: brightness(0.96);
+}
+.stat-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+}
+.stat-card .stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+/* ── Tables ── */
+.table th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+.table td {
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+.table-hover tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.04);
+}
+
+/* ── Stock badges ── */
+.badge-stock-ok    { background-color: #d1e7dd; color: #0a3622; }
+.badge-stock-low   { background-color: #fff3cd; color: #664d03; }
+.badge-stock-out   { background-color: #f8d7da; color: #58151c; }
+
+/* ── Navbar ── */
+.navbar-brand { font-size: 1.2rem; letter-spacing: -0.01em; }
+.nav-link { font-size: 0.9rem; }
+.navbar .badge { font-size: 0.7rem; }
+
+/* ── Search bar ── */
+.search-wrapper { max-width: 320px; }
+
+/* ── Print ── */
+@media print {
+  .navbar, .footer, .no-print, .btn, form { display: none !important; }
+  .card { border: none !important; box-shadow: none !important; }
+  body { background: white; }
+}
+
+/* ── Responsive table ── */
+.table-responsive { border-radius: 8px; }
+
+/* ── Form controls ── */
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* ── Low stock pulse ── */
+@keyframes pulse-warning {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.low-stock-row { animation: pulse-warning 2s infinite; }
+
+/* ── Dashboard chart container ── */
+.chart-container { position: relative; height: 280px; }
+
+/* ── Login page ── */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+.login-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 420px;
+}
