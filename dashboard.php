@@ -199,10 +199,10 @@ require_once __DIR__ . '/includes/header.php';
         <h6 class="fw-bold mb-0"><i class="bi bi-pie-chart me-2 text-info"></i>Stock by Category</h6>
       </div>
       <div class="card-body d-flex flex-column align-items-center justify-content-center">
-        <div style="position:relative; height:200px; width:200px;">
+        <div style="position:relative; height:180px; width:180px;">
           <canvas id="stockDonut"></canvas>
         </div>
-        <div id="donutLegend" class="mt-3 w-100" style="font-size:0.8rem;"></div>
+        <div id="donutLegend" class="mt-3 w-100 px-2" style="font-size:0.8rem; overflow:hidden;"></div>
       </div>
     </div>
   </div>
@@ -461,10 +461,10 @@ window.addEventListener('load', function () {
     const legend = document.getElementById('donutLegend');
     if (legend) {
       legend.innerHTML = labels.map((l, i) =>
-        `<div class="d-flex align-items-center gap-2 mb-1">
+        `<div class="d-flex align-items-center gap-2 mb-1" style="min-width:0">
           <span style="width:10px;height:10px;border-radius:50%;background:${donutColors[i]};display:inline-block;flex-shrink:0"></span>
-          <span class="text-muted">${l}</span>
-          <span class="ms-auto fw-semibold">${data[i]} units</span>
+          <span class="text-muted text-truncate" style="flex:1;min-width:0">${l}</span>
+          <span class="fw-semibold flex-shrink-0">${data[i]} units</span>
         </div>`
       ).join('');
     }
