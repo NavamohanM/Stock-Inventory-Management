@@ -2,7 +2,7 @@
 
 <footer class="footer mt-auto py-3 bg-light border-top">
   <div class="container-fluid px-4">
-    <span class="text-muted small">&copy; <?= date('Y') ?> <?= APP_NAME ?>. All rights reserved.</span>
+    <span class="text-muted small">&copy; 2026 Navamohan. All rights reserved.</span>
   </div>
 </footer>
 
