@@ -199,10 +199,10 @@ require_once __DIR__ . '/includes/header.php';
         <h6 class="fw-bold mb-0"><i class="bi bi-pie-chart me-2 text-info"></i>Stock by Category</h6>
       </div>
       <div class="card-body d-flex flex-column align-items-center justify-content-center">
-        <div style="position:relative; height:180px; width:180px;">
+        <div style="position:relative; height:200px; width:100%; max-width:220px;">
           <canvas id="stockDonut"></canvas>
         </div>
-        <div id="donutLegend" class="mt-3 w-100 px-2" style="font-size:0.8rem; overflow:hidden;"></div>
+        <div id="donutLegend" class="mt-3 w-100 px-2" style="font-size:0.8rem;"></div>
       </div>
     </div>
   </div>
@@ -444,7 +444,8 @@ window.addEventListener('load', function () {
         }]
       },
       options: {
-        responsive: false,
+        responsive: true,
+        maintainAspectRatio: false,
         cutout: '65%',
         plugins: {
           legend: { display: false },
